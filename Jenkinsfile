@@ -4,31 +4,25 @@ pipeline {
         nodejs 'Node'
     }
     triggers {
-        pollSCM '* * * * *'
+        pollSCM('* * * * *')
     }
     stages {
         stage('Checkout') {
             steps {
                 echo "Checking out.."
-                git url: '''
-                https://github.com/RMarP/quick-example-of-testing-in-nodejs.git
-                '''
+                git url: 'https://github.com/RMarP/quick-example-of-testing-in-nodejs.git'
             }
         }
         stage('Build') {
             steps {
                 echo "Building.."
-                sh '''
-                npm i
-                '''
+                sh 'npm i'
             }
         }
         stage('Test') {
             steps {
                 echo "Testing.."
-                sh '''
-                npm test
-                '''
+                sh 'npm test'
             }
         }
     }
