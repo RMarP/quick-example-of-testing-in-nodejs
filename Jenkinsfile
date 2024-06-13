@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        GIT_BRANCH_NAME = 'prueba'  // Definir la variable para el nombre de la rama
+        GIT_BRANCH_NAME = prueba  // Definir la variable para el nombre de la rama
     }
     tools {
         nodejs 'Node'
