@@ -10,8 +10,8 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo "Checking out.."
-                git '''
-                clone https://github.com/RMarP/quick-example-of-testing-in-nodejs.git
+                git url: '''
+                https://github.com/RMarP/quick-example-of-testing-in-nodejs.git
                 '''
             }
         }
