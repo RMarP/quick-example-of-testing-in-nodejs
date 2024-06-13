@@ -3,9 +3,6 @@ pipeline {
     tools {
         nodejs 'Node'
     }
-    triggers {
-        pollSCM('* * * * *')
-    }
     stages {
         stage('Checkout') {
             steps {
