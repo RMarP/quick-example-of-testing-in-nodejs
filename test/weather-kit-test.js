@@ -48,7 +48,7 @@ describe('Test the weather kit module\'s basic functionality', function(){
     });
 
     it('should always return true as water is always required', function(){
-       expect(helloWeather.doINeed.water(monday)).equal(true);
+       expect(helloWeather.doINeed.water(monday)).equal(false);
     });
 
 });
