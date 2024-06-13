@@ -17,7 +17,7 @@ describe('Test that the data fetched from OpenWeatherMap is processed correctly'
 
     it('Should check fetched data is processed correctly', function(){
         var callback = sinon.stub();
-        callback.withArgs("London").returns(rawWeatherData);
+        callback.withArgs("").returns(rawWeatherData);
         //TODO
     });
 
